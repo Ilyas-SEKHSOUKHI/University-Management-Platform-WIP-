@@ -1,0 +1,30 @@
+#seconnecter{
+    position: fixed;
+    inset: 0px;
+    width: 12rem;
+    height: 5rem;
+    max-width: 100vw;
+    max-height: 100dvh;
+    margin: auto;
+
+    color: white;
+    text-align: center;
+
+    border-radius: 20px;
+    background-color:#2a5298;
+    padding: 20px;
+    width: 320px;
+    height: 320px;
+}
+input{
+    margin-top: 5px;
+    border-radius: 5px;
+}
+input[type=button]{
+    background-color: rgb(126, 150, 226);
+    color: rgb(32, 31, 31);
+}
+input[type=button]:hover{
+    background-color: rgb(174, 185, 248);
+    color: black;
+}
