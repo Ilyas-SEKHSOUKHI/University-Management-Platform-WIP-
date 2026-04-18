@@ -72,7 +72,7 @@ function ToDoList(){
             <div>
                 <b>${Task_Entred}</b> 
                 <p>${new Date().toLocaleDateString()}</p>
-                <button id="SuppTaskButton" onclick="SuppTask()">Supp Task Test</button>
+                <button id="SuppTaskButton" onclick="SuppTask(this)">Supp Task Test</button>
             </div>
         </div>`;
     TaskCards.append(Nouveaux_Task);
@@ -82,10 +82,11 @@ function ToDoList(){
 }
 
 //Supp Un Task
-function SuppTask(){
+function SuppTask(button){
+    let taskDiv = button.parentNode.parentNode;
+    taskDiv.remove();
+
     let Nombre_des_Taches_h3 = document.getElementById('Tache_conteur');
-    let SuppTaskButton = document.getElementById('SuppTaskButton');
-    SuppTaskButton.parentNode.parentNode.remove();
     Nombre_des_Taches--;
     Nombre_des_Taches_h3.innerText = Nombre_des_Taches;
 }
@@ -111,7 +112,7 @@ function annonce(){
             <div>
                 <b>${annonce_entred}</b>
                 <p>${new Date().toLocaleDateString()}</p>
-                <button id="SuppAnnonceButton" onclick="SuppAnnonce()">Supp Annonce Test</button>
+                <button id="SuppAnnonceButton" onclick="SuppAnnonce(this)">Supp Annonce Test</button>
             </div>
         </div>
     `;
@@ -154,10 +155,11 @@ function annonce(){
 }
 
 // Supp Une Annonce
-function SuppAnnonce(){
+function SuppAnnonce(button){
     let Nombre_des_Annonces_h3 = document.getElementById('Annonces_conteur');
-    let SuppAnnonceButton = document.getElementById('SuppAnnonceButton');
-    SuppAnnonceButton.parentNode.parentNode.remove();
+
+    button.parentNode.parentNode.remove();
+
     Nombre_des_Annonces--;
     Nombre_des_Annonces_h3.innerText = Nombre_des_Annonces;
 }
@@ -178,7 +180,7 @@ function Cours(){
     Element_list.innerHTML=`
         <li>
             ${Cours_Entred}
-            <button id="Supp_Cour" onclick="Supp_Cour()">Supp Cour Test</button>
+            <button id="Supp_Cour" onclick="Supp_Cour(this)">Supp Cour Test</button>
         </li>
     `;
     List.append(Element_list);
@@ -187,10 +189,11 @@ function Cours(){
 }
 
 // Supp Cour
-function Supp_Cour(){
+function Supp_Cour(button){
     let Nombre_des_Cours_h3 = document.getElementById('Cours_conteur');
-    let buttonSupp = document.getElementById('Supp_Cour');
-    buttonSupp.parentNode.remove();
+
+    button.parentNode.remove();
+
     Nombre_des_Cours--;
     Nombre_des_Cours_h3.innerText = Nombre_des_Cours;
 }
