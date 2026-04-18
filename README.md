@@ -1,82 +1,70 @@
-# 🎓 Academic Management Web Platform (Work in Progress)
+# 🎓 University Management Platform (WIP)
 
-## 📌 Description
+## 📌 Overview
 
-This project is a web-based academic management platform designed to simplify and organize academic data.
-It aims to manage students, teachers, courses, and administrative processes through a user-friendly interface.
+This project is a university management platform built using **HTML, CSS, JavaScript, PHP, and MySQL**.
+It aims to centralize academic services such as course management, student records, and communication tools in one place.
 
-⚠️ **Status: Work in Progress (Under Development)**
+⚠️ **Note:** This project is still under development.
 
 ---
 
-## 🎯 Objectives
+## 🚀 Features (Planned & In Progress)
 
-* Centralize academic data
-* Manage students and teachers efficiently
-* Organize courses and schedules
-* Improve administrative workflows
+* 📊 Dashboard overview
+* 📚 Course management system
+* 📝 Grades tracking
+* 👤 User profile management
+* 💬 Messaging system between users
 
 ---
 
 ## 🛠️ Technologies Used
 
-* HTML5
-* CSS3
-* JavaScript
-* PHP
-* SQL (Database)
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** PHP
+* **Database:** MySQL
 
 ---
 
-## 📁 Project Structure
+## ⚙️ Installation
 
-```
-WEB PROJECT/
-│
-├── HTML/
-│   └── index.html
-│
-├── CSS/
-│   └── style.css
-│
-├── JS/
-│   └── script.js
-│
-├── PHP/
-│   └── (backend files)
-│
-├── DATABASE/
-│   ├── MCD/
-│   └── SQL/
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/university-platform.git
 ```
 
----
+2. Move the project to your server directory (e.g., `htdocs` for XAMPP)
 
-## 🚧 Progress Status
+3. Import the database:
 
-* ✅ Requirements analysis
-* ✅ Database design (SQL + MCD)
-* 🔄 Frontend development (HTML, CSS, JS)
-* ⏳ Backend development (PHP)
-* ⏳ Integration (Frontend + Backend)
+* Open phpMyAdmin
+* Create a database
+* Import the `.sql` file (if available)
 
----
+4. Start your local server (XAMPP, WAMP, etc.)
 
-## 🔮 Future Improvements
+5. Open in browser:
 
-* User authentication system
-* Admin dashboard
-* Responsive design (mobile-friendly)
-* Advanced features (notifications, reports, etc.)
+```
+http://localhost/university-platform
+```
 
 ---
 
-## 👨‍💻 Author
+## 📌 Project Status
 
-**Ilyas SEKHSOUKHI**
+🚧 Work in Progress – new features and improvements are being added.
+
+---
+
+## 🤝 Contribution
+
+Contributions, ideas, and feedback are welcome.
 
 ---
 
 ## 📄 License
 
-This project is for educational purposes.
+This project is open-source and available under the MIT License.

@@ -1,18 +1,117 @@
-body{
-    margin: 0;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
 }
-nav{
-    background-color: #2a5298;
-    padding: 5px;
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2a5298;
+  padding: 10px 20px;
 }
-a{
-    color: white;
-    padding: 5px;
-    text-decoration: none;
+
+.logo {
+  height: 40px;
 }
-a:hover{
-    color: black;
+
+.nav_links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
 }
-#container{
-    text-align: center;
+
+.nav_links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav_links a:hover {
+  color: black;
+}
+
+.profil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.user_img {
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* IMAGE */
+.banner {
+  width: 100%;
+}
+
+/* CONTAINER */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: #d6d0c8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card h2 {
+  text-align: center;
+  color: #2a5298;
+  margin-bottom: 10px;
+}
+
+/* BOX (annonces) */
+.box {
+  background: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* ICONS */
+i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* BUTTON */
+button {
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  background: #2a5298;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4b76c2;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: #2a5298;
+  color: white;
+  padding: 10px;
+}
+
+/*Dark Mode click*/
+#Dark_Mode_click{
+  margin: 20px;
 }

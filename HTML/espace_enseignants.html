@@ -3,20 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../Images/University_icon.png">
-    <link rel="stylesheet" href="../CSS/espace_enseignants.css">
     <title>Espace Enseignant</title>
+    <link rel="icon" type="image/png" href="../Images/University_icon.png">
+    <link rel="stylesheet" href="../CSS/espace_enseignants.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#cours">Cours</a>
-        <a href="#notes">Notes</a>
-        <a href="#etudiants">Étudiants</a>
-    </nav>
-    <div id="container">
-        <h1>Espace Enseignant</h1>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <img src="../Images/logoNav.png" class="logo">
+
+    <div class="nav_links">
+        <a href="#">Accueil</a>
+        <a href="#">Cours</a>
+        <a href="#">Notes</a>
+        <a href="#">Étudiants</a>
     </div>
+
+    <div class="profil">
+        <p>Ilyas Sekhsoukhi</p>
+        <img src="../Images/Profile.png" class="user_img">
+    </div>
+</nav>
+
+<!-- BANNER -->
+<img src="../Images/BanniereProf.png" class="banner">
+
+<!-- MAIN -->
+<main class="container">
+
+    <section class="card">
+        <div id="NCours">
+            <h2>Nombre de cours</h2>
+            <h3 id="Cours_conteur">3</h3>
+        </div>
+    </section>
+
+    <section class="card">
+        <div id="NTaches">
+            <h2>Nombre de tâches</h2>
+            <h3 id="Tache_conteur">2</h3>
+        </div>
+    </section>
+
+    <section class="card">
+        <div id="NAnnonces">
+        <h2>Nombre d'annonces</h2>
+        <h3 id="Annonces_conteur">2</h3>
+        </div>
+    </section>
+
+    <!-- MES COURS -->
+    <section class="card">
+        <h2>Mes Cours</h2>
+        <div>
+            <input type="text" id="Cours">
+        </div>
+        <ul id="Cours_List">
+            <li>
+                Introduction à la Psychologie
+                <button id="Supp_Cour" onclick="Supp_Cour()">Supp Cour Test</button>
+            </li>
+            <li>
+                Droit Constitutionnel
+                <button id="Supp_Cour" onclick="Supp_Cour()">Supp Cour Test</button>
+            </li>
+            <li>
+                Marketing Digital
+                <button id="Supp_Cour" onclick="Supp_Cour()">Supp Cour Test</button>
+            </li>
+        </ul>
+        <button onclick="Cours()">Ajouter un cours</button>
+    </section>
+
+    <!-- TACHES -->
+    <section class="card">
+        <h2>Tâches à faire</h2>
+    <div id="ToDoList">
+        <div>
+            <input type="text" id="Task">
+        </div>
+
+        <div class="task">
+            <input type="checkbox">
+            <div>
+                <b>Corriger les devoirs</b>
+                <p>25 sept</p>
+                <button id="SuppTaskButton" onclick="SuppTask()">Supp Task Test</button>
+            </div>
+        </div>
+
+        <div class="task">
+            <input type="checkbox">
+            <div>
+                <b>Créer un quiz marketing</b>
+                <p>26 sept</p>
+                <button id="SuppTaskButton" onclick="SuppTask()">Supp Task Test</button>
+            </div>
+        </div>
+    </div>
+        <button onclick="ToDoList()">Créer une tâche</button>
+    </section>
+
+    <!-- ANNONCES -->
+    <section class="card">
+        <h2>Annonces</h2>
+    <div id="Annonces">
+        <div>
+            <input type="text" id="Annonces_Entred">
+        </div>
+
+        <div class="annonce">
+            <i class="fas fa-file"></i>
+            <div>
+                <b>Nouvelle ressource</b>
+                <p>Aujourd'hui</p>
+                <button id="SuppAnnonceButton" onclick="SuppAnnonce()">Supp Annonce Test</button>
+            </div>
+        </div>
+
+        <div class="annonce">
+            <i class="fas fa-file"></i>
+            <div>
+                <b>Rappel devoir</b>
+                <p>Hier</p>
+                <button id="SuppAnnonceButton" onclick="SuppAnnonce()">Supp Annonce Test</button>
+            </div>
+        </div>
+    </div>
+        <button onclick="annonce()">Créer une annonce</button>
+    </section>
+
+    <!-- EVENEMENTS -->
+    <section class="card">
+        <h2>Événements</h2>
+        <p><i class="fas fa-calendar"></i> Réunion - 28 sept</p>
+        <p><i class="fas fa-calendar"></i> Conférence - 22 sept</p>
+    </section>
+
+    <!-- MESSAGES -->
+    <section class="card">
+        <h2>Messages</h2>
+        <p><i class="fas fa-comments"></i> Question devoir</p>
+        <p><i class="fas fa-comments"></i> Absence cours</p>
+    </section>
+
+    <!-- RESSOURCES -->
+    <section class="card">
+        <h2>Ressources</h2>
+        <p><i class="fas fa-book"></i> Matériel pédagogique</p>
+        <p><i class="fas fa-tools"></i> Support technique</p>
+        <p><i class="fas fa-graduation-cap"></i> Formations</p>
+    </section>
+
+    <div id="Dark_Mode_click">
+        <button id="bt_Dark" onclick="DarkMode()">
+            Dark Mode
+        </button>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>Ilyas Sekhsoukhi</p>
+</footer>
+
+<script src="../JavaScript/espace_enseignants.js"></script>
+
 </body>
 </html>
