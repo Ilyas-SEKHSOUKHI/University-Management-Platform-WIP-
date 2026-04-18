@@ -32,7 +32,7 @@ It aims to centralize academic services such as course management, student recor
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/university-platform.git
+git clone https://github.com/Ilyas-SEKHSOUKHI/University-Management-Platform-WIP-.git
 ```
 
 2. Move the project to your server directory (e.g., `htdocs` for XAMPP)
