@@ -1,3 +1,6 @@
+let Title = "Espace Enseignants";
+console.log(Title);
+
 /**************/
 /*chatGpt code*/ 
 /**************/
@@ -19,8 +22,7 @@ channel.onmessage = (event) => {
 /* Fin ChatGpt Code */
 /********************/
 
-let Title = "Espace Enseignants";
-console.log(Title);
+const Saved_Task = localStorage.getItem("Task"); // Task Saved dans local Storage
 
 let Body = document.getElementsByTagName('body')[0];
 let Cards = document.querySelectorAll('.card');
@@ -66,11 +68,14 @@ function ToDoList(){
         alert("Veuillez entrer une tâche");
         return;
     }
+
+    localStorage.setItem("Task",Task_Entred); // Save the value entred
+
     Nouveaux_Task.innerHTML = `
         <div class="task">
             <input type="checkbox">
             <div>
-                <b>${Task_Entred}</b> 
+                <b>${Saved_Task}</b> 
                 <p>${new Date().toLocaleDateString()}</p>
                 <button id="SuppTaskButton" onclick="SuppTask(this)">Supp Task Test</button>
             </div>
