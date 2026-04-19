@@ -1,3 +1,7 @@
+<?php
+    // Page ChatBot
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

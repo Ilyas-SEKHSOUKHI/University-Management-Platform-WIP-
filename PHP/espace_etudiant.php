@@ -1,3 +1,7 @@
+<?php
+    // Page Etudiant
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

@@ -1,4 +1,6 @@
 let Title = "Espace Enseignants";
+console.log(Title);
+
 if (localStorage.getItem("task") === null) {
     localStorage.setItem("task", JSON.stringify([]));
 }
@@ -8,7 +10,7 @@ function loaddata(){
 const TaskUser = JSON.parse(localStorage.getItem("task") || "[]");
 const Nouveaux_Task = document.createElement('div');
 const cards = document.getElementById("cards")
-console.log(Title);
+
 Nouveaux_Task.innerHTML = `
    ${
     TaskUser.map((value)=>(
@@ -55,11 +57,14 @@ channel.onmessage = (event) => {
 
 const Saved_Task = localStorage.getItem("Task"); // Task Saved dans local Storage
 
+
+
+if(currentPage.includes('espace_enseignants')){
+
 let Body = document.getElementsByTagName('body')[0];
 let Cards = document.querySelectorAll('.card');
 let DarkMode_Button_Text = document.querySelector('#bt_Dark');
-
-if(currentPage.includes('espace_enseignants')){
+    
 // Dark Mode 
 let Dark_Mode = false;
 function DarkMode(){

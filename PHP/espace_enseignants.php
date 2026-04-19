@@ -1,3 +1,7 @@
+<?php
+    // Page Enseignant
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -47,14 +51,14 @@
     <section class="card">
         <div id="NTaches">
             <h2>Nombre de tâches</h2>
-            <h3 id="Tache_conteur"></h3>
+            <h3 id="Tache_conteur">0</h3>
         </div>
     </section>
 
     <section class="card">
         <div id="NAnnonces">
-        <h2>Nombre d'annonces</h2>
-        <h3 id="Annonces_conteur">2</h3>
+            <h2>Nombre d'annonces</h2>
+            <h3 id="Annonces_conteur">2</h3>
         </div>
     </section>
 
@@ -95,11 +99,7 @@
         <div id="listtask">
 
         </div>
-        </div>
-        
-       
-
-       
+        </div>       
     </div>
     </section>
 
@@ -107,8 +107,9 @@
     <section class="card">
         <h2>Annonces</h2>
     <div id="Annonces">
+
         <div>
-            <input type="text" id="Annonces_Entred">
+            <input type="text" id="Annonces_Entred" name="Annonce">
         </div>
 
         <div class="annonce">

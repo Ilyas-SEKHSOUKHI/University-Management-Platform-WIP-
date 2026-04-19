@@ -1,3 +1,7 @@
+<?php
+    // Page S'inscrire
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +15,7 @@
 
 <div class="container">
 
-    <form class="form">
+    <form class="form" action="" method="post">
 
         <img src="../Images/Profile.png" class="avatar">
 
@@ -20,24 +24,28 @@
         <div class="row">
             <div class="input_group">
                 <label>Nom</label>
-                <input type="text" required>
+                <input type="text" name="nom" required>
             </div>
 
             <div class="input_group">
                 <label>Prénom</label>
-                <input type="text" required>
+                <input type="text" name="prenom" required>
             </div>
         </div>
 
         <div class="row">
             <div class="input_group">
-                <label>Date de naissance</label>
-                <input type="date" required>
+                <label>Prof / Etudiant ?</label>
+                <input list="WHO_ARE_YOU" name="WHO_ARE_YOU">
+                <datalist id="WHO_ARE_YOU">
+                    <option value="Prof">
+                    <option value="Etudiant">
+                </datalist>
             </div>
 
             <div class="input_group">
                 <label>Classe</label>
-                <input list="classes">
+                <input list="classes" name="classe">
                 <datalist id="classes">
                     <option value="CPGE">
                     <option value="Génie Informatique">
@@ -48,12 +56,12 @@
         <div class="row">
             <div class="input_group">
                 <label>Email</label>
-                <input type="email" required>
+                <input type="email" name="email" required>
             </div>
 
             <div class="input_group">
                 <label>Mot de passe</label>
-                <input type="password" required>
+                <input type="password" name="password" required>
             </div>
         </div>
 

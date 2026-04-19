@@ -1,3 +1,7 @@
+<?php
+    // Page Connecter
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +16,7 @@
 <body>
 
     <div class="container">
-        <form class="form">
+        <form class="form" action="" method="post">
 
             <!-- Image -->
             <img src="../Images/Profile.png" alt="avatar" class="avatar">
@@ -23,7 +27,7 @@
             <div class="row">
                 <div class="input_group">
                     <label>Email</label>
-                    <input type="email" placeholder="Votre email" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
                 </div>
             </div>
 
@@ -31,7 +35,7 @@
             <div class="row">
                 <div class="input_group">
                     <label>Mot de passe</label>
-                    <input type="password" placeholder="Mot de passe" required>
+                    <input type="password" name="password" placeholder="Mot de passe" required>
                 </div>
             </div>
 
