@@ -90,9 +90,9 @@ function DarkMode(){
 }
 // To do list
 function ToDoList(){
-     const TaskUser = JSON.parse(localStorage.getItem("task") || "[]");
-const Nouveaux_Task = document.createElement('div');
-const cards = document.getElementById("cards")
+    const TaskUser = JSON.parse(localStorage.getItem("task") || "[]");
+    const Nouveaux_Task = document.createElement('div');
+    const cards = document.getElementById("cards")
     let Nombre_des_Taches =TaskUser.length ;
     let Task_Entred = document.querySelector('#Task');
     let TaskCards = document.getElementById('ToDoList');
@@ -105,6 +105,11 @@ const cards = document.getElementById("cards")
 
    localStorage.setItem("task", JSON.stringify(TaskUser));
     loaddata()
+
+    // Compteur des taches
+    
+    Nombre_des_Taches++;
+    Nombre_des_Taches_h3.innerText = Nombre_des_Taches;
 }
 
 //Supp Un Task
