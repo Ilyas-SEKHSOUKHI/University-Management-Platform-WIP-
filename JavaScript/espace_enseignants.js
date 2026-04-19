@@ -1,6 +1,35 @@
 let Title = "Espace Enseignants";
+if (localStorage.getItem("task") === null) {
+    localStorage.setItem("task", JSON.stringify([]));
+}
+// a fix le nombre de tasks
+let Tache_conteur = document.getElementById("Tache_conteur")
+function loaddata(){
+const TaskUser = JSON.parse(localStorage.getItem("task") || "[]");
+const Nouveaux_Task = document.createElement('div');
+const cards = document.getElementById("cards")
 console.log(Title);
-
+Nouveaux_Task.innerHTML = `
+   ${
+    TaskUser.map((value)=>(
+        `
+          <div class="task">
+            <input type="checkbox">
+            <div>
+                <b>${value}</b> 
+                <p>${new Date().toLocaleDateString()}</p>
+                <button id="SuppTaskButton" onclick="SuppTask(this)">Supp Task Test</button>
+            </div>
+        </div>`
+    ))
+   }
+`
+cards.innerHTML = ""
+cards.appendChild(Nouveaux_Task)
+}
+window.onload = function(){
+    loaddata()
+}
 /**************/
 /*chatGpt code*/ 
 /**************/
@@ -21,6 +50,8 @@ channel.onmessage = (event) => {
 /********************/
 /* Fin ChatGpt Code */
 /********************/
+
+//code oussama
 
 const Saved_Task = localStorage.getItem("Task"); // Task Saved dans local Storage
 
@@ -58,32 +89,22 @@ function DarkMode(){
 }
 }
 // To do list
-let Nombre_des_Taches = 2;
 function ToDoList(){
-    let Task_Entred = document.querySelector('#Task').value;
+     const TaskUser = JSON.parse(localStorage.getItem("task") || "[]");
+const Nouveaux_Task = document.createElement('div');
+const cards = document.getElementById("cards")
+    let Nombre_des_Taches =TaskUser.length ;
+    let Task_Entred = document.querySelector('#Task');
     let TaskCards = document.getElementById('ToDoList');
-    const Nouveaux_Task = document.createElement('div');
     let Nombre_des_Taches_h3 = document.getElementById('Tache_conteur');
     if(Task_Entred==""){
         alert("Veuillez entrer une tâche");
         return;
     }
+   TaskUser.push(Task_Entred.value);
 
-    localStorage.setItem("Task",Task_Entred); // Save the value entred
-
-    Nouveaux_Task.innerHTML = `
-        <div class="task">
-            <input type="checkbox">
-            <div>
-                <b>${Saved_Task}</b> 
-                <p>${new Date().toLocaleDateString()}</p>
-                <button id="SuppTaskButton" onclick="SuppTask(this)">Supp Task Test</button>
-            </div>
-        </div>`;
-    TaskCards.append(Nouveaux_Task);
-    Nombre_des_Taches++;
-    Nombre_des_Taches_h3.innerText = Nombre_des_Taches;
-
+   localStorage.setItem("task", JSON.stringify(TaskUser));
+    loaddata()
 }
 
 //Supp Un Task

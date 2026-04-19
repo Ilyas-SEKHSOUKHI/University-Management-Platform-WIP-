@@ -6,9 +6,11 @@
     <title>Espace Enseignant</title>
     <link rel="icon" type="image/png" href="../Images/University_icon.png">
     <link rel="stylesheet" href="../CSS/espace_enseignants.css">
+    <script src="../JavaScript/espace_enseignants.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
 </head>
 <body>
 
@@ -45,7 +47,7 @@
     <section class="card">
         <div id="NTaches">
             <h2>Nombre de tâches</h2>
-            <h3 id="Tache_conteur">2</h3>
+            <h3 id="Tache_conteur"></h3>
         </div>
     </section>
 
@@ -80,32 +82,25 @@
     </section>
 
     <!-- TACHES -->
-    <section class="card">
+    <section  class="card">
         <h2>Tâches à faire</h2>
+        
     <div id="ToDoList">
         <div>
             <input type="text" id="Task">
         </div>
+                <button onclick="ToDoList()">Créer une tâche</button>
 
-        <div class="task">
-            <input type="checkbox">
-            <div>
-                <b>Corriger les devoirs</b>
-                <p>25 sept</p>
-                <button id="SuppTaskButton" onclick="SuppTask(this)">Supp Task Test</button>
-            </div>
-        </div>
+        <div id="cards">
+<div id="listtask">
 
-        <div class="task">
-            <input type="checkbox">
-            <div>
-                <b>Créer un quiz marketing</b>
-                <p>26 sept</p>
-                <button id="SuppTaskButton" onclick="SuppTask(this)">Supp Task Test</button>
-            </div>
         </div>
+        </div>
+        
+       
+
+       
     </div>
-        <button onclick="ToDoList()">Créer une tâche</button>
     </section>
 
     <!-- ANNONCES -->
@@ -172,7 +167,6 @@
     <p>Ilyas Sekhsoukhi</p>
 </footer>
 
-<script src="../JavaScript/espace_enseignants.js"></script>
 
 </body>
 </html>
