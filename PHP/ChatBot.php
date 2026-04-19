@@ -3,15 +3,28 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/ChatBot.css">
-    <link rel="icon" type="image/png" href="../Images/University_icon.png">
-    <title>University AI</title>
+<meta charset="UTF-8">
+<title>ChatBot IA</title>
+<link rel="stylesheet" href="../CSS/chatbot.css">
 </head>
 <body>
-    <script src="../JavaScript/ChatBot.js"></script>
+
+<div class="chat-container">
+    <div class="chat-header">Assistant IA</div>
+
+    <div class="chat-box" id="chat-box"></div>
+
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Écrire un message...">
+        <button onclick="sendMessage()">Envoyer</button>
+    </div>
+</div>
+
+<script src="../JavaScript/ChatBot.js"></script>
 </body>
 </html>
+
+
+  
