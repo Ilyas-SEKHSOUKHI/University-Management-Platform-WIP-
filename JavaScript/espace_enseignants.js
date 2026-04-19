@@ -68,6 +68,7 @@ let DarkMode_Button_Text = document.querySelector('#bt_Dark');
 // Dark Mode 
 let Dark_Mode = false;
 function DarkMode(){
+    console.log("DarkMode clicked");
     if(Dark_Mode==false){ // Dark Mode Configuration
         Body.style.backgroundColor="black";
 

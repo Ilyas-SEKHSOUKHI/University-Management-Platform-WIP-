@@ -10,7 +10,7 @@
     <title>Espace Enseignant</title>
     <link rel="icon" type="image/png" href="../Images/University_icon.png">
     <link rel="stylesheet" href="../CSS/espace_enseignants.css">
-    <script src="../JavaScript/espace_enseignants.js"></script>
+    
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -168,6 +168,7 @@
     <p>Ilyas Sekhsoukhi</p>
 </footer>
 
+<script src="../JavaScript/espace_enseignants.js"></script>
 
 </body>
 </html>
