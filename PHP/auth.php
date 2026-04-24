@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     // recuperer les informations saisies par l'utilisateur
     $nom = filter_input(INPUT_POST,'nom',FILTER_SANITIZE_SPECIAL_CHARS);
     $prenom = filter_input(INPUT_POST,'prenom',FILTER_SANITIZE_SPECIAL_CHARS);
@@ -58,5 +60,23 @@
     foreach($_COOKIE as $key => $value){
         echo "{$key} = {$value} <br>";
     }
+
+    // SESSION
+    $_SESSION["nom"] = $nom;
+    $_SESSION["prenom"] = $prenom;
+    $_SESSION["role"] = $role;
+    $_SESSION["classe"] = $classe;
+    $_SESSION["email"] = $email;
+
+    // Choix du d'ashbord
+    if($role == "Prof"){
+        header('location: espace_enseignants.php');
+        exit;
+    }else{
+        header('location: espace_etudiant.php');
+        exit;
+    }
+
+    
 
 ?>

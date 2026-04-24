@@ -1,5 +1,14 @@
 <?php
     // Page Etudiant
+    session_start();
+?>
+
+<?php
+    if(isset($_POST["logout"])){
+        session_destroy();
+        header('location: s_inscrire.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +37,18 @@
     </div>
 
     <div class="profil">
-        <p>Ilyas Sekhsoukhi</p>
+        <p>
+            <?php
+                echo $_SESSION["nom"];
+                echo" ";
+                echo $_SESSION["prenom"];
+            ?>
+        </p>
+
+        <form action="espace_etudiant.php" method="post">
+            <input type="submit" name="logout" value="logout">
+        </form>
+
         <img src="../Images/Profile.png" class="user_img">
     </div>
 </nav>
