@@ -94,14 +94,12 @@
         </button>
     </div>
 
-<!-- FOOTER -->
-<footer>
-    <p>Ilyas Sekhsoukhi</p>
-    <a href="mailto:sekhsoukhiilyas@gmail.com">Email</a>
-</footer>
-
 <script src="../JavaScript/espace_etudiant.js"></script>
 <script src="../JavaScript/espace_enseignants.js"></script>
 
 </body>
 </html>
+
+<?php
+    include("../HTML/footer.html");
+?>

@@ -163,12 +163,11 @@
 
 </main>
 
-<!-- FOOTER -->
-<footer>
-    <p>Ilyas Sekhsoukhi</p>
-</footer>
-
 <script src="../JavaScript/espace_enseignants.js"></script>
 
 </body>
 </html>
+
+<?php
+    include("../HTML/footer.html");
+?>
