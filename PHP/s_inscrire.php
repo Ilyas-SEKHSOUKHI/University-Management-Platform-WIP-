@@ -15,7 +15,7 @@
 
 <div class="container">
 
-    <form class="form" action="" method="post">
+    <form class="form" action="auth.php" method="post">
 
         <img src="../Images/Profile.png" class="avatar">
 
@@ -35,7 +35,7 @@
 
         <div class="row">
             <div class="input_group">
-                <label>Prof / Etudiant ?</label>
+                <label>Role</label>
                 <input list="WHO_ARE_YOU" name="WHO_ARE_YOU">
                 <datalist id="WHO_ARE_YOU">
                     <option value="Prof">
@@ -68,7 +68,7 @@
         <button type="submit">S'inscrire</button>
 
         <p class="link">
-            Déjà un compte ? <a href="http://127.0.0.1:5500/HTML/se_connecter.html">Se connecter</a>
+            Déjà un compte ? <a href="se_connecter.php">Se connecter</a>
         </p>
 
     </form>
