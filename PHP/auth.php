@@ -17,6 +17,9 @@
     $email = filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
     $password = filter_input(INPUT_POST,'password',FILTER_SANITIZE_SPECIAL_CHARS);
 
+    // Hash Paassword
+    $hash = password_hash($password,PASSWORD_DEFAULT);
+
     // Afficher les donnees saisies pour le test
 
     echo"<br>###### Afficher les donnees ######<br>";
@@ -59,7 +62,7 @@
     if(empty($password)){
         echo "password est vide <br>";
     }else{
-        echo "{$password} <br>";
+        echo "{$hash} <br>"; // Afficher password avec hash
     }
 
     // Afficher les COOKIES
@@ -76,6 +79,7 @@
     $_SESSION["email"] = $email;
 
     // Choix du d'ashbord
+    
     if($role == "Prof"){
         header('location: espace_enseignants.php');
         exit;
