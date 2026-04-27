@@ -2,6 +2,13 @@
 
     session_start();
 
+    // Savoir si un formulaire a ete envoye 
+    /* On ne peut pas voir le message, car on passe 
+    directement du formulaire d’inscription au dashboard concerné. */
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        echo"le formulaire a ete envoye! ";
+    }
+
     // recuperer les informations saisies par l'utilisateur
     $nom = filter_input(INPUT_POST,'nom',FILTER_SANITIZE_SPECIAL_CHARS);
     $prenom = filter_input(INPUT_POST,'prenom',FILTER_SANITIZE_SPECIAL_CHARS);
