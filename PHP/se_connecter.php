@@ -16,7 +16,7 @@
 <body>
 
     <div class="container">
-        <form class="form" action="" method="post">
+        <form class="form" action="auth.php" method="post">
 
             <!-- Image -->
             <img src="../Images/Profile.png" alt="avatar" class="avatar">
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="input_group">
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="Votre email" required>
+                    <input type="email" name="email_conn" placeholder="Votre email" required>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="input_group">
                     <label>Mot de passe</label>
-                    <input type="password" name="password" placeholder="Mot de passe" required>
+                    <input type="password" name="password_conn" placeholder="Mot de passe" required>
                 </div>
             </div>
 
@@ -61,3 +61,6 @@
 
 </body>
 </html>
+
+
+     

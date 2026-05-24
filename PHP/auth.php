@@ -1,5 +1,7 @@
 <?php
 
+    include("db.php");
+
     session_start();
 
     // Savoir si un formulaire a ete envoye 
@@ -78,16 +80,26 @@
     $_SESSION["classe"] = $classe;
     $_SESSION["email"] = $email;
 
-    // Choix du d'ashbord
     
-    if($role == "Prof"){
-        header('location: espace_enseignants.php');
-        exit;
+    // Enregistrer les donnees dans la base de donnees
+    $sql = "INSERT INTO USERS (Nom, Prenom, Role, Classe, Email, Password) 
+            VALUES ('$nom', '$prenom', '$role', '$classe', '$email', '$hash')";
+    mysqli_query($conn, $sql);  
+
+    // connecter l'utilisateur a son espace personnel
+    $sqll = "SELECT * FROM USERS WHERE Email='$email'";
+    $result = mysqli_query($conn, $sqll);
+    if($_POST["email_conn"]==$email && $_POST["password_conn"]==$password){
+        echo "Vous êtes connecté";
     }else{
-        header('location: espace_etudiant.php');
-        exit;
+        echo "Email ou mot de passe incorrect";
     }
 
-    
+    if($role == "Prof"){
+        header('Location: espace_enseignants.php');
+    } else {
+        header('Location: espace_etudiant.php');
+    }
 
+    mysqli_close($conn);
 ?>
