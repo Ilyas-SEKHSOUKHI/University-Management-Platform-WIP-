@@ -40,7 +40,7 @@
             </div>
 
             <!-- Bouton -->
-            <button type="submit">Entrer</button>
+            <button type="submit" name="action" value="login">Entrer</button>
 
             <!-- Liens -->
             <div class="link">

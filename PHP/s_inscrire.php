@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <button type="submit">S'inscrire</button>
+        <button type="submit" name="action" value="register">S'inscrire</button>
 
         <p class="link">
             Déjà un compte ? <a href="se_connecter.php">Se connecter</a>
